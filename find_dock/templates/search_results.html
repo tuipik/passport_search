@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="d-flex justify-content-center mt-5">
+        <h3><span class="badge badge-secondary">Search Results</span></h3></div>
+    <div class="container justify-content-center mt-5">
+        {% if object_list|length %}
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Series</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Theft_date</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for document in object_list %}
+                    <tr>
+                        <td>{{ document.document_series }}</td>
+                        <td>{{ document.document_number }}</td>
+                        <td>{{ document.status }}</td>
+                        <td>{{ document.theft_date }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="card">
+                <div class="card-body">
+                    Sorry, no results for your search criteria
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+{% endblock %}
