@@ -13,11 +13,11 @@ or via ssh `git clone git@github.com:tuipik/passport_search.git`
 
 - Install requirements `pip install -r requirements.txt`
 
-- Migrate db `make migrate`  This command also creates superuser with login `admin` and pass `adminpass`
+- Migrate db with command `make migrate`  This command also creates superuser with login `admin` and pass `adminpass`
 
-- Fill up database with data `make db`  This may take about 1 hour cause data has more than 2 mln rows
+- Fill up database with data with command `make db`  This may take about 1 hour cause data has more than 2 mln rows
 
-- Start local server by `make run` command in Terminal
+- Start local server with command `make run` command in Terminal
 
 ---
 **Endpoints:**
@@ -25,7 +25,7 @@ or via ssh `git clone git@github.com:tuipik/passport_search.git`
 
 for web search app: `http://0.0.0.0:8000/`
 
-    - example of dockument: HA 681035
+    - example of document: HA 681035
     
 for admin: `http://0.0.0.0:8000/admin`
 
